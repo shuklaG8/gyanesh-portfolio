@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Hero() {
     return (
@@ -44,8 +45,8 @@ export default function Hero() {
                     </div>
 
                     <p className="text-gray-400 text-lg mb-8 max-w-lg leading-relaxed text-justify">
-                        I'm a skilled software developer with experience in JavaScript, React, Node.js, React Native, and MongoDB.
-                        I am experienced in developing admin panels and websites. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems.
+                        I&apos;m a skilled software developer with experience in JavaScript, React, Node.js, React Native, and MongoDB.
+                        I am experienced in developing admin panels and websites. I&apos;m a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems.
                     </p>
 
                     <div className="flex gap-4">
@@ -89,7 +90,7 @@ export default function Hero() {
                         <div className="absolute inset-0 rounded-full border border-green-500/30 animate-spin-slow"></div>
                         {/* Core Avatar Image */}
                         <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden bg-gray-800 border-4 border-gray-700/50 relative z-10 flex items-center justify-center">
-                            <img src="/gyanesh.jpeg" alt="Gyanesh Shukla" className="w-full h-full object-cover" />
+                            <Image src="/gyanesh.jpeg" alt="Gyanesh Shukla" fill className="object-cover" />
                         </div>
                     </div>
                 </motion.div>

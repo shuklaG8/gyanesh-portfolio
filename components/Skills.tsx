@@ -30,7 +30,7 @@ export default function Skills() {
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center text-green-400">Technical Arsenal</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center text-green-400">Technical Skills</h2>
 
                     <div className="flex flex-wrap justify-center gap-12 md:gap-16 max-w-6xl mx-auto py-10">
                         {skills.map((skill, index) => (

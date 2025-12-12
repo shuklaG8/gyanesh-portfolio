@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Inter, Poppins } from "next/font/google"; // Import fonts
 import clsx from "clsx";
 
