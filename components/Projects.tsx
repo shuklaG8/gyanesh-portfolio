@@ -66,7 +66,8 @@ export default function Projects() {
                                 </div>
                                 {/* Placeholder Image */}
                                 <div className="w-full h-full flex items-center justify-center text-gray-600">
-                                    {project.img ? <img src={project.img} className="w-full h-full object-cover" /> : "[Preview Image]"}
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    {project.img ? <img src={project.img} alt={project.title} className="w-full h-full object-cover" /> : "[Preview Image]"}
                                 </div>
                             </div>
 

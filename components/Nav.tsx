@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import ThemeToggle from "./ThemeToggle";
 import { FaBars, FaTimes, FaDownload } from "react-icons/fa";
 import clsx from "clsx";
 
