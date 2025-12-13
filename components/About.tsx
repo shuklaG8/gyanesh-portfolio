@@ -16,7 +16,7 @@ export default function About() {
                     {/* Main Bio */}
                     <div className="w-full md:w-1/2">
                         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-green-400">About Me</h2>
-                        <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                        <p className="text-gray-300 text-lg leading-relaxed mb-6 text-justify">
                             I am <strong className="text-white">Gyanesh Shukla</strong>.
                             With over 1 year of professional experience, I specialize in the <strong className="text-white">MERN Stack, Next.js, and Generative AI</strong>.
                             I am experienced in developing admin panels and websites. I&apos;m a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems.
