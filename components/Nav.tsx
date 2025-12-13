@@ -1,21 +1,34 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes, FaDownload } from "react-icons/fa";
 import clsx from "clsx";
 
 const navLinks = [
     { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
+    { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Blog", href: "#blog" },
     { name: "Contact", href: "#contact" },
 ];
 
 export default function Nav() {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const navRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (navRef.current && !navRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -27,6 +40,7 @@ export default function Nav() {
 
     return (
         <nav
+            ref={navRef}
             className={clsx(
                 "fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md",
                 scrolled ? "bg-black/80 py-3 shadow-lg" : "bg-transparent py-5"
@@ -68,7 +82,7 @@ export default function Nav() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-gray-900/95 backdrop-blur-xl border-b border-gray-800 p-6 flex flex-col space-y-4 shadow-2xl">
+                <div className="md:hidden absolute top-full left-0 w-full bg-[#0b0f12] border-b border-gray-800 p-6 flex flex-col space-y-4 shadow-2xl">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -80,7 +94,7 @@ export default function Nav() {
                         </Link>
                     ))}
                     <a
-                        href="/resume.pdf"
+                        href="/gyanesh1.pdf"
                         download
                         className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg"
                     >
