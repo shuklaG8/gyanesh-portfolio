@@ -63,7 +63,7 @@ export default function Nav() {
                         </Link>
                     ))}
                     <a
-                        href="/gyanesh1.pdf"
+                        href="/gyanesh.pdf"
                         download
                         className="flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-full transition-all shadow-lg hover:shadow-green-500/20"
                     >
