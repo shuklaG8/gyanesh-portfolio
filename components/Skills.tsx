@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaDocker } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaAws } from "react-icons/fa";
 import { SiTypescript, SiNextdotjs, SiTailwindcss, SiMongodb, SiDjango } from "react-icons/si";
 import SkillIcon from "./SkillIcon";
 
@@ -18,6 +18,7 @@ const skills = [
     { name: "Django DRF", icon: <SiDjango className="text-[#092E20]" /> },
     { name: "Git", icon: <FaGitAlt className="text-[#F05032]" /> },
     { name: "Docker", icon: <FaDocker className="text-[#2496ED]" /> },
+    { name: "AWS", icon: <FaAws className="text-[#2496ED]" /> },
 ];
 
 export default function Skills() {

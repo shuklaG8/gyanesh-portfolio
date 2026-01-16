@@ -18,7 +18,7 @@ export default function About() {
                         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-green-400">About Me</h2>
                         <p className="text-gray-300 text-lg leading-relaxed mb-6 text-justify">
                             I am <strong className="text-white">Gyanesh Shukla</strong>.
-                            With over 1 year of professional experience, I specialize in the <strong className="text-white">MERN Stack, Next.js, and Generative AI</strong>.
+                            With over 2.8 year of professional experience, I specialize in the <strong className="text-white">MERN Stack, Next.js, and Generative AI</strong>.
                             I am experienced in developing admin panels and websites. I&apos;m a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems.
                             My passion lies in building scalable, high-performance web applications and exploring the frontiers of AI to solve real-world problems.
                         </p>
@@ -30,7 +30,7 @@ export default function About() {
                         <div className="grid grid-cols-1 gap-4 mt-8">
                             <div className="p-6 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-green-500/50 transition-all">
                                 <h3 className="text-xl font-bold text-white mb-2">Experience</h3>
-                                <p className="text-green-400 font-bold">1+ Year</p>
+                                <p className="text-green-400 font-bold">2.8+ Year</p>
                                 <p className="text-sm text-gray-400">Full-Stack Development</p>
                             </div>
                         </div>
