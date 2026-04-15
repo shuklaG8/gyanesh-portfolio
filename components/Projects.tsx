@@ -22,12 +22,12 @@ const projects = [
         live: "https://nutrexa.co.in/",
     },
     {
-        title: "Braymil",
-        desc: "Customized Shopify theme implementation for an e-commerce brand, enhancing user experience and conversion.",
-        role: "Frontend Developer",
-        tech: ["Shopify", "Theme Customization", "Liquid", "CSS"],
-        img: "/braymil.png",
-        live: "https://braymil.com/",
+        title: "MERN Chat Application",
+        desc: "Developed a real-time one-to-one chat application using the MERN stack with secure JWT authentication, online/offline user status, live messaging with Socket.io, and a responsive modern UI for seamless communication.",
+        role: "Full Stack Developer",
+        tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Redux Toolkit", "Socket.io", "JWT", "Tailwind CSS"],
+        img: "/chat-app.png",
+        live: "https://chat-app-frontend-dun-ten.vercel.app/",
     },
 ];
 
