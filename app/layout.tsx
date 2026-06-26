@@ -12,8 +12,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Gyanesh Shukla | Software Engineer & Gen-AI Developer",
-  description: "Portfolio of Gyanesh Shukla - BCA, MERN, Next.js, and Gen-AI Developer building scalable and beautiful apps.",
+  title: "Gyanesh Shukla | AI & Full-Stack Engineer",
+  description: "Portfolio of Gyanesh Shukla — 3+ years building AI applications with LangChain, LangGraph, RAG, MCP, Next.js, and the MERN stack.",
 };
 
 export default function RootLayout({

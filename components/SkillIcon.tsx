@@ -22,6 +22,7 @@ export default function SkillIcon({ icon, name, delay = 0 }: SkillIconProps) {
             }}
             viewport={{ once: true }}
             className="relative group w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center p-2"
+            whileHover={{ scale: 1.1 }}
         >
             <motion.div
                 animate={{

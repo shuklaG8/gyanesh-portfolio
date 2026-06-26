@@ -7,10 +7,10 @@ import ProjectModal from "./ProjectModal";
 const projects = [
     {
         title: "Praans Consultech",
-        desc: "Professional website featuring an AI chatbot for client interaction and support. Built for a consultancy firm.",
-        role: "Full Stack Developer",
-        tech: ["Next.js", "TypeScript", "Shadcn UI", "AI Chatbot"],
-        img: "/praans.png", // Placeholder
+        desc: "Professional consultancy website with an AI-powered chatbot for client interaction. Built RAG-based knowledge retrieval for domain-specific Q&A and support automation.",
+        role: "AI & Full-Stack Developer",
+        tech: ["Next.js", "TypeScript", "RAG", "AI Chatbot", "LangChain"],
+        img: "/praans.png",
         live: "https://www.praansconsultech.com/",
     },
     {

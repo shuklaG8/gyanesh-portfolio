@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes, FaDownload } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 
 const navLinks = [
@@ -53,14 +54,21 @@ export default function Nav() {
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center space-x-8">
-                    {navLinks.map((link) => (
-                        <Link
+                    {navLinks.map((link, i) => (
+                        <motion.div
                             key={link.name}
-                            href={link.href}
-                            className="text-gray-300 hover:text-green-400 transition-colors font-medium"
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: i * 0.1 }}
                         >
-                            {link.name}
-                        </Link>
+                            <Link
+                                href={link.href}
+                                className="text-gray-300 hover:text-green-400 transition-colors font-medium relative group"
+                            >
+                                {link.name}
+                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all group-hover:w-full" />
+                            </Link>
+                        </motion.div>
                     ))}
                     <a
                         href="/gyanesh.pdf"
@@ -81,27 +89,46 @@ export default function Nav() {
             </div>
 
             {/* Mobile Menu */}
-            {isOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-[#0b0f12] border-b border-gray-800 p-6 flex flex-col space-y-4 shadow-2xl">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            onClick={() => setIsOpen(false)}
-                            className="text-lg text-gray-300 hover:text-green-400"
-                        >
-                            {link.name}
-                        </Link>
-                    ))}
-                    <a
-                        href="/gyanesh1.pdf"
-                        download
-                        className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg"
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="md:hidden absolute top-full left-0 w-full bg-[#0b0f12]/95 backdrop-blur-lg border-b border-gray-800 overflow-hidden shadow-2xl"
                     >
-                        <FaDownload size={14} /> Download Resume
-                    </a>
-                </div>
-            )}
+                        <div className="p-6 flex flex-col space-y-4">
+                            {navLinks.map((link, i) => (
+                                <motion.div
+                                    key={link.name}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: i * 0.08 }}
+                                >
+                                    <Link
+                                        href={link.href}
+                                        onClick={() => setIsOpen(false)}
+                                        className="text-lg text-gray-300 hover:text-green-400 block"
+                                    >
+                                        {link.name}
+                                    </Link>
+                                </motion.div>
+                            ))}
+                            <motion.a
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.3 }}
+                                href="/gyanesh.pdf"
+                                download
+                                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                            >
+                                <FaDownload size={14} /> Download Resume
+                            </motion.a>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </nav>
     );
 }

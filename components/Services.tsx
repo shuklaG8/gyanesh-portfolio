@@ -20,8 +20,8 @@ const services = [
         icon: <FaServer />,
     },
     {
-        title: "Generative AI",
-        desc: "Integrating LLMs and AI models to create intelligent applications.",
+        title: "Generative AI & Agents",
+        desc: "Building RAG pipelines, LangGraph agent workflows, and MCP integrations for intelligent, production-ready AI applications.",
         icon: <FaRobot />,
     },
     {
@@ -58,7 +58,8 @@ export default function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="p-8 bg-[#1f2937] rounded-2xl hover:bg-[#374151] transition-all hover:-translate-y-2 hover:shadow-xl border border-gray-700 hover:border-green-500/50 group"
+                            whileHover={{ y: -8, scale: 1.02 }}
+                            className="p-8 bg-[#1f2937] rounded-2xl hover:bg-[#374151] transition-colors hover:shadow-xl border border-gray-700 hover:border-green-500/50 group"
                         >
                             <div className="text-4xl text-green-500 mb-6 group-hover:scale-110 transition-transform duration-300">
                                 {service.icon}
