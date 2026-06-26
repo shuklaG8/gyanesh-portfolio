@@ -1,19 +1,24 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
 
-export default function Contact() {
-    const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success">("idle");
+const CONTACT_EMAIL = "gyaneshkumar9648@gmail.com";
 
-    const handleSubmit = (e: React.FormEvent) => {
+export default function Contact() {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setFormStatus("submitting");
-        // Simulate generic submission
-        setTimeout(() => {
-            setFormStatus("success");
-        }, 1500);
+        const form = e.currentTarget;
+        const name = (form.elements.namedItem("name") as HTMLInputElement).value.trim();
+        const email = (form.elements.namedItem("email") as HTMLInputElement).value.trim();
+        const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim();
+
+        const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+        const body = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+        );
+
+        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
     };
 
     return (
@@ -40,8 +45,8 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-semibold mb-1">Email</h3>
-                                    <a href="mailto:gyaneshkumar9648@gmail.com" className="text-gray-300 hover:text-white transition-colors">
-                                        gyaneshkumar9648@gmail.com
+                                    <a href={`mailto:${CONTACT_EMAIL}`} className="text-gray-300 hover:text-white transition-colors">
+                                        {CONTACT_EMAIL}
                                     </a>
                                 </div>
                             </div>
@@ -64,9 +69,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-semibold mb-1">Location</h3>
-                                    <p className="text-gray-300">
-                                        Gurugram, India
-                                    </p>
+                                    <p className="text-gray-300">Noida, India</p>
                                 </div>
                             </div>
                         </div>
@@ -76,14 +79,17 @@ export default function Contact() {
                             <div>
                                 <input
                                     type="text"
+                                    name="name"
                                     placeholder="Your Name"
                                     required
+                                    minLength={2}
                                     className="w-full p-4 bg-gray-900 border border-gray-800 rounded-lg focus:outline-none focus:border-green-500 text-white transition-all"
                                 />
                             </div>
                             <div>
                                 <input
                                     type="email"
+                                    name="email"
                                     placeholder="Your Email"
                                     required
                                     className="w-full p-4 bg-gray-900 border border-gray-800 rounded-lg focus:outline-none focus:border-green-500 text-white transition-all"
@@ -91,22 +97,19 @@ export default function Contact() {
                             </div>
                             <div>
                                 <textarea
+                                    name="message"
                                     placeholder="Message"
                                     rows={4}
                                     required
+                                    minLength={10}
                                     className="w-full p-4 bg-gray-900 border border-gray-800 rounded-lg focus:outline-none focus:border-green-500 text-white transition-all resize-none"
                                 />
                             </div>
                             <button
                                 type="submit"
-                                disabled={formStatus !== "idle"}
-                                className="w-full py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                                className="w-full py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2"
                             >
-                                {formStatus === "idle" && (
-                                    <>Send Message <FaPaperPlane /></>
-                                )}
-                                {formStatus === "submitting" && "Sending..."}
-                                {formStatus === "success" && "Message Sent!"}
+                                Send Message <FaPaperPlane />
                             </button>
                         </form>
                     </div>

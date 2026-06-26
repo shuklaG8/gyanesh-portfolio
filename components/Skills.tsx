@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaAws, FaBrain, FaProjectDiagram, FaPlug, FaLink } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaAws, FaBrain, FaProjectDiagram, FaPlug, FaLink, FaDatabase } from "react-icons/fa";
 import { SiTypescript, SiNextdotjs, SiTailwindcss, SiMongodb, SiDjango, SiPython, SiOpenai } from "react-icons/si";
 import SkillIcon from "./SkillIcon";
 
@@ -10,6 +10,7 @@ const aiSkills = [
     { name: "LangGraph", icon: <FaProjectDiagram className="text-[#FF6B6B]" /> },
     { name: "RAG", icon: <FaBrain className="text-[#A855F7]" /> },
     { name: "MCP", icon: <FaPlug className="text-[#F59E0B]" /> },
+    { name: "Vector DB", icon: <FaDatabase className="text-[#06B6D4]" /> },
     { name: "Python", icon: <SiPython className="text-[#3776AB]" /> },
     { name: "OpenAI", icon: <SiOpenai className="text-white" /> },
 ];
