@@ -36,7 +36,7 @@ const experiences = [
 
 const impactStats = [
     {
-        value: "3+ Years",
+        value: "4+ Years",
         label: "Building RAG, GenAI & Full-Stack Systems",
         icon: <FaBriefcase className="text-green-400" />,
         gradient: "from-green-500/20 to-emerald-500/10",
@@ -90,7 +90,7 @@ export default function About() {
                         About & Work Experience
                     </h2>
                     <p className="text-gray-300 text-lg leading-relaxed text-justify">
-                        AI/GenAI Engineer and Full Stack Developer with <strong className="text-white">3+ years</strong> of experience building RAG pipelines, LLM-powered applications, and agentic AI workflows with <strong className="text-green-400">LangChain, LangGraph, and MCP-aligned tool interfaces</strong>. Skilled in vector databases (Pinecone, Qdrant, FAISS, ChromaDB) and full-stack delivery across MERN and FastAPI.
+                        AI/GenAI Engineer and Full Stack Developer with <strong className="text-white">4+ years</strong> of experience building RAG pipelines, LLM-powered applications, and agentic AI workflows with <strong className="text-green-400">LangChain, LangGraph, and MCP-aligned tool interfaces</strong>. Skilled in vector databases (Pinecone, Qdrant, FAISS, ChromaDB) and full-stack delivery across MERN and FastAPI.
                     </p>
                 </motion.div>
 

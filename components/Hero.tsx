@@ -100,7 +100,7 @@ export default function Hero() {
                         transition={{ delay: 0.6 }}
                         className="text-gray-300 text-base md:text-lg mb-8 leading-relaxed max-w-2xl text-justify"
                     >
-                        AI/GenAI Engineer and Full Stack Developer with <strong className="text-white">3+ years</strong> building RAG pipelines, LLM-powered applications, and agentic AI workflows with <strong className="text-green-400">LangChain, LangGraph, and MCP-aligned tool interfaces</strong>. Skilled in vector databases (Pinecone, Qdrant, FAISS, ChromaDB) and full-stack delivery across MERN and FastAPI.
+                        AI/GenAI Engineer and Full Stack Developer with <strong className="text-white">4+ years</strong> building RAG pipelines, LLM-powered applications, and agentic AI workflows with <strong className="text-green-400">LangChain, LangGraph, and MCP-aligned tool interfaces</strong>. Skilled in vector databases (Pinecone, Qdrant, FAISS, ChromaDB) and full-stack delivery across MERN and FastAPI.
                     </motion.p>
 
                     {/* Action Buttons */}
